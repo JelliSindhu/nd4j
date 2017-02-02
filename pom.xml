@@ -16,66 +16,54 @@
   ~  */
   ~
   -->
-  
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.nd4j</groupId>
     <artifactId>nd4j</artifactId>
     <version>0.7.2-SNAPSHOT</version>
-<!--
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
--->
+    <!--
+        <parent>
+            <groupId>org.sonatype.oss</groupId>
+            <artifactId>oss-parent</artifactId>
+            <version>7</version>
+        </parent>
+    -->
 
     <prerequisites>
         <maven>3.0</maven>
     </prerequisites>
 
-<!--Customer Repository details -->
-<!--
-    <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus snapshot repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>nexus-releases</id>
-            <name>Nexus Release Repository</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
--->
-
-<!--Bintray/Jfrog Repository details-->
-<!--
+    <!--Customer Repository details -->
+    <!--
         <distributionManagement>
-                <repository>
-                        <id>bintray-deeplearning4j-maven</id>
-                        <name>Deeplearning4j-maven</name>
-			<url>https://api.bintray.com/maven/deeplearning4j/maven/${project.artifactId}/;publish=1</url>
-                </repository>
-				 <snapshotRepository>
-					<id>snapshots</id>
-					<name>local-snapshots</name>
-					<url>http://localhost:8081/artifactory/libs-snapshot-local</url>
-				</snapshotRepository>
+            <snapshotRepository>
+                <id>sonatype-nexus-snapshots</id>
+                <name>Sonatype Nexus snapshot repository</name>
+                <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            </snapshotRepository>
+            <repository>
+                <id>nexus-releases</id>
+                <name>Nexus Release Repository</name>
+                <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            </repository>
         </distributionManagement>
--->
-<!--Intropro Nexux repository-->
+    -->
+
+    <!--Bintray/Jfrog Repository details-->
     <distributionManagement>
         <repository>
-            <id>intropro</id>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>bintray-deeplearning4j-maven</id>
+            <name>Deeplearning4j-maven</name>
+            <url>${BINTRAY_MAVEN}/maven/${project.artifactId}/;publish=1</url>
         </repository>
         <snapshotRepository>
-            <id>intropro</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>snapshots</id>
+            <name>local-snapshots</name>
+            <url>${ARTFACT_URL}/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -85,7 +73,9 @@
         <profile>
             <id>linux</id>
             <activation>
-                <os><name>linux</name></os>
+                <os>
+                    <name>linux</name>
+                </os>
             </activation>
             <properties>
                 <os.name>linux</os.name>
@@ -94,7 +84,9 @@
         <profile>
             <id>macosx</id>
             <activation>
-                <os><name>mac os x</name></os>
+                <os>
+                    <name>mac os x</name>
+                </os>
             </activation>
             <properties>
                 <os.name>macosx</os.name>
@@ -103,7 +95,9 @@
         <profile>
             <id>windows</id>
             <activation>
-                <os><family>windows</family></os>
+                <os>
+                    <family>windows</family>
+                </os>
             </activation>
             <properties>
                 <os.name>windows</os.name>
@@ -112,7 +106,9 @@
         <profile>
             <id>i386</id>
             <activation>
-                <os><arch>i386</arch></os>
+                <os>
+                    <arch>i386</arch>
+                </os>
             </activation>
             <properties>
                 <os.arch>x86_64</os.arch>
@@ -121,7 +117,9 @@
         <profile>
             <id>i486</id>
             <activation>
-                <os><arch>i486</arch></os>
+                <os>
+                    <arch>i486</arch>
+                </os>
             </activation>
             <properties>
                 <os.arch>x86_64</os.arch>
@@ -130,7 +128,9 @@
         <profile>
             <id>i586</id>
             <activation>
-                <os><arch>i586</arch></os>
+                <os>
+                    <arch>i586</arch>
+                </os>
             </activation>
             <properties>
                 <os.arch>x86_64</os.arch>
@@ -139,7 +139,9 @@
         <profile>
             <id>i686</id>
             <activation>
-                <os><arch>i686</arch></os>
+                <os>
+                    <arch>i686</arch>
+                </os>
             </activation>
             <properties>
                 <os.arch>x86_64</os.arch>
@@ -148,7 +150,9 @@
         <profile>
             <id>x86</id>
             <activation>
-                <os><arch>x86</arch></os>
+                <os>
+                    <arch>x86</arch>
+                </os>
             </activation>
             <properties>
                 <os.arch>x86_64</os.arch>
@@ -157,7 +161,9 @@
         <profile>
             <id>amd64</id>
             <activation>
-                <os><arch>amd64</arch></os>
+                <os>
+                    <arch>amd64</arch>
+                </os>
             </activation>
             <properties>
                 <os.arch>x86_64</os.arch>
@@ -166,7 +172,9 @@
         <profile>
             <id>x86-64</id>
             <activation>
-                <os><arch>x86-64</arch></os>
+                <os>
+                    <arch>x86-64</arch>
+                </os>
             </activation>
             <properties>
                 <os.arch>x86_64</os.arch>
@@ -175,7 +183,9 @@
         <profile>
             <id>arm</id>
             <activation>
-                <os><arch>arm</arch></os>
+                <os>
+                    <arch>arm</arch>
+                </os>
             </activation>
             <properties>
                 <os.arch>arm</os.arch>
@@ -271,7 +281,7 @@
         <connection>scm:git@github.com:deeplearning4j/nd4j.git</connection>
         <developerConnection>scm:git:git@github.com:deeplearning4j/nd4j.git</developerConnection>
         <url>git@github.com:deeplearning4j/nd4j.git</url>
-        <tag> HEAD</tag>
+        <tag>HEAD</tag>
     </scm>
 
 
@@ -311,10 +321,12 @@
         <logback.version>1.1.2</logback.version>
         <javacpp.version>1.3.1</javacpp.version>
         <javacpp-presets.version>1.3</javacpp-presets.version>
-        <process-classes.skip> false</process-classes.skip>  <!-- To skip native compilation phase: -Dprocess-classes.skip=true    -->
-        <javacpp.platform>${os.name}-${os.arch}</javacpp.platform> <!-- For Android: -Dplatform=android-arm                                        -->
-        <javacpp.platform.root />            <!--              -Dplatform.root=/path/to/android-ndk/                         -->
-        <javacpp.platform.compiler />    <!--              -Dplatform.compiler=/path/to/arm-linux-androideabi-g++        -->
+        <process-classes.skip>false
+        </process-classes.skip>  <!-- To skip native compilation phase: -Dprocess-classes.skip=true    -->
+        <javacpp.platform>${os.name}-${os.arch}
+        </javacpp.platform> <!-- For Android: -Dplatform=android-arm                                        -->
+        <javacpp.platform.root/>            <!--              -Dplatform.root=/path/to/android-ndk/                         -->
+        <javacpp.platform.compiler/>    <!--              -Dplatform.compiler=/path/to/arm-linux-androideabi-g++        -->
         <spark.version>1.6.2</spark.version>
         <maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
@@ -386,58 +398,58 @@
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven-deploy-plugin.version}</version>
-<!--
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
--->
+                <!--
+                                <configuration>
+                                    <skip>true</skip>
+                                </configuration>
+                -->
             </plugin>
-<!--
+            <!--
+                        <plugin>
+                            <groupId>org.sonatype.plugins</groupId>
+                            <artifactId>nexus-staging-maven-plugin</artifactId>
+                            <version>1.6.6</version>
+                            <executions>
+                                <execution>
+                                    <id>default-deploy</id>
+                                    <phase>deploy</phase>
+                                    <goals>
+                                        <goal>deploy</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                            <extensions>true</extensions>
+                            <configuration>
+                                <serverId>nexus-releases</serverId>
+                                <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                                <skipStagingRepositoryClose>true</skipStagingRepositoryClose>
+                            </configuration>
+                        </plugin>
+            -->
             <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.6</version>
+                <groupId>com.lewisd</groupId>
+                <artifactId>lint-maven-plugin</artifactId>
+                <version>0.0.11</version>
+                <configuration>
+                    <failOnViolation>true</failOnViolation>
+                    <onlyRunRules>
+                        <rule>DuplicateDep</rule>
+                        <rule>RedundantDepVersion</rule>
+                        <rule>RedundantPluginVersion</rule>
+                        <rule>VersionProp</rule>
+                        <rule>DotVersionProperty</rule>
+                    </onlyRunRules>
+                    <xmlOutputFile>${project.build.directory}/maven-lint-result.xml</xmlOutputFile>
+                </configuration>
                 <executions>
                     <execution>
-                        <id>default-deploy</id>
-                        <phase>deploy</phase>
+                        <id>pom-lint</id>
+                        <phase>validate</phase>
                         <goals>
-                            <goal>deploy</goal>
+                            <goal>check</goal>
                         </goals>
                     </execution>
                 </executions>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>nexus-releases</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <skipStagingRepositoryClose>true</skipStagingRepositoryClose>
-                </configuration>
-            </plugin>
--->
-            <plugin>
-              <groupId>com.lewisd</groupId>
-              <artifactId>lint-maven-plugin</artifactId>
-              <version>0.0.11</version>
-              <configuration>
-                <failOnViolation>true</failOnViolation>
-                <onlyRunRules>
-                  <rule>DuplicateDep</rule>
-                  <rule>RedundantDepVersion</rule>
-                  <rule>RedundantPluginVersion</rule>
-                  <rule>VersionProp</rule>
-                  <rule>DotVersionProperty</rule>
-                </onlyRunRules>
-                <xmlOutputFile>${project.build.directory}/maven-lint-result.xml</xmlOutputFile>
-              </configuration>
-              <executions>
-                <execution>
-                  <id>pom-lint</id>
-                  <phase>validate</phase>
-                  <goals>
-                    <goal>check</goal>
-                  </goals>
-                </execution>
-              </executions>
             </plugin>
         </plugins>
 
