@@ -20,7 +20,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>nd4j-backends</artifactId>
-        <groupId>com.intropro</groupId>
+        <groupId>org.nd4j</groupId>
         <version>0.7.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -54,38 +54,38 @@
         </dependency>
 
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-api</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-native-api</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-jackson</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-base64</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <!-- Shaded version of Jackson -->
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>jackson</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-native</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -123,7 +123,7 @@
             <version>${logback.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-kafka_${scala.binary.version}</artifactId>
             <version>${project.version}</version>
         </dependency>

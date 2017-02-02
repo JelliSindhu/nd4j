@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>nd4j-parameter-server-parent</artifactId>
-        <groupId>com.intropro</groupId>
+        <groupId>org.nd4j</groupId>
         <version>0.7.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -46,7 +46,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-parameter-server-model</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -55,7 +55,7 @@
             <artifactId>junit</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-aeron</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -66,26 +66,26 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-native</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-native</artifactId>
             <version>${project.version}</version>
             <classifier>${javacpp.platform}</classifier>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-parameter-server</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.intropro</groupId>
+            <groupId>org.nd4j</groupId>
             <artifactId>nd4j-parameter-server-status_2.10</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
