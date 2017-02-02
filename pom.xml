@@ -35,6 +35,8 @@
     <prerequisites>
         <maven>3.0</maven>
     </prerequisites>
+
+<!--Customer Repository details -->
 <!--
     <distributionManagement>
         <snapshotRepository>
@@ -50,6 +52,8 @@
     </distributionManagement>
 -->
 
+<!--Bintray/Jfrog Repository details-->
+<!--
         <distributionManagement>
                 <repository>
                         <id>bintray-deeplearning4j-maven</id>
@@ -62,7 +66,18 @@
 					<url>http://localhost:8081/artifactory/libs-snapshot-local</url>
 				</snapshotRepository>
         </distributionManagement>
-
+-->
+<!--Intropro Nexux repository-->
+    <distributionManagement>
+        <repository>
+            <id>intropro</id>
+            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>intropro</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <profiles>
 
@@ -355,7 +370,7 @@
                     </execution>
                 </executions>
             </plugin>
-<!--
+
             <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <executions>
@@ -367,7 +382,7 @@
                     </execution>
                 </executions>
             </plugin>
--->
+
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven-deploy-plugin.version}</version>
