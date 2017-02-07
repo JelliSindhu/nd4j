@@ -2,7 +2,7 @@
     <parent>
         <artifactId>nd4j-backends</artifactId>
         <groupId>org.nd4j</groupId>
-        <version>0.7.2</version>
+        <version>0.7.2-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -124,7 +124,7 @@
                 <dependency.artifactId>${project.artifactId}</dependency.artifactId>
                 <dependency.version>${project.parent.version}</dependency.version>
                 <dependency.packaging>pom</dependency.packaging>
-                <dependency.classifier></dependency.classifier>
+                <dependency.classifier />
             </properties>
         </profile>
 
@@ -165,12 +165,12 @@
                 </property>
             </activation>
             <properties>
-                <javacpp.platform.android-arm></javacpp.platform.android-arm>
-                <javacpp.platform.android-x86></javacpp.platform.android-x86>
-                <javacpp.platform.linux-x86_64></javacpp.platform.linux-x86_64>
-                <javacpp.platform.macosx-x86_64></javacpp.platform.macosx-x86_64>
-                <javacpp.platform.windows-x86_64></javacpp.platform.windows-x86_64>
-                <javacpp.platform.linux-ppc64le></javacpp.platform.linux-ppc64le>
+                <javacpp.platform.android-arm />
+                <javacpp.platform.android-x86 />
+                <javacpp.platform.linux-x86_64 />
+                <javacpp.platform.macosx-x86_64 />
+                <javacpp.platform.windows-x86_64 />
+                <javacpp.platform.linux-ppc64le />
             </properties>
         </profile>
 
@@ -182,12 +182,12 @@
                 </file>
             </activation>
             <properties>
-                <javacpp.platform.android-arm></javacpp.platform.android-arm>
-                <javacpp.platform.android-x86></javacpp.platform.android-x86>
-                <javacpp.platform.linux-x86_64></javacpp.platform.linux-x86_64>
-                <javacpp.platform.macosx-x86_64></javacpp.platform.macosx-x86_64>
-                <javacpp.platform.windows-x86_64></javacpp.platform.windows-x86_64>
-                <javacpp.platform.linux-ppc64le></javacpp.platform.linux-ppc64le>
+                <javacpp.platform.android-arm />
+                <javacpp.platform.android-x86 />
+                <javacpp.platform.linux-x86_64 />
+                <javacpp.platform.macosx-x86_64 />
+                <javacpp.platform.windows-x86_64 />
+                <javacpp.platform.linux-ppc64le />
             </properties>
         </profile>
 
