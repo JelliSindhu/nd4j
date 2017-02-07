@@ -18,7 +18,7 @@
         <dependency>
             <groupId>${dependency.groupId}</groupId>
             <artifactId>${dependency.artifactId}</artifactId>
-            <version>${dependency.version}</version>
+            <version>${project.version}</version>
             <type>${dependency.packaging}</type>
             <classifier>${dependency.classifier}</classifier>
         </dependency>

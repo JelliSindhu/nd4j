@@ -28,7 +28,7 @@
     <properties>
         <dependency.groupId>${project.groupId}</dependency.groupId>
         <dependency.artifactId>${project.artifactId}</dependency.artifactId>
-        <dependency.version>${project.version}</dependency.version>
+        <!--<dependency.version>${project.version}</dependency.version>-->
         <dependency.packaging>${project.packaging}</dependency.packaging>
         <dependency.classifier>${javacpp.platform}</dependency.classifier>
         <javacpp.platform.android-arm>android-arm</javacpp.platform.android-arm>
