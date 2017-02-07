@@ -36,15 +36,15 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus snapshot repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>local-nexus</id>
+            <name>Sonatype Nexus Pro Local snapshot repository</name>
+            <url>${NEXUS_URL_SNAPSHOT}</url>
         </snapshotRepository>
-        <repository>
-            <id>nexus-releases</id>
-            <name>Nexus Release Repository</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
+<!--        <repository>
+            <id>local-nexus</id>
+            <name>Sonatype Nexus Pro Local Release Repository</name>
+            <url>${NEXUS_URL_RELEASES}</url>
+        </repository>-->
     </distributionManagement>
 
     <profiles>
@@ -371,9 +371,9 @@
                 </executions>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>nexus-releases</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <skipStagingRepositoryClose>true</skipStagingRepositoryClose>
+                    <serverId>local-nexus</serverId>
+                    <nexusUrl>http://ec2-54-200-65-148.us-west-2.compute.amazonaws.com:8088/nexus/</nexusUrl>
+                    <!--<skipStagingRepositoryClose>true</skipStagingRepositoryClose>-->
                 </configuration>
             </plugin>
             <plugin>
@@ -439,7 +439,7 @@
                     <configuration>
                         <mavenExecutorId>forked-path</mavenExecutorId>
                         <!-- To deploy to an open staging repository: -Darguments=-DstagingRepositoryId=orgnd4j-xxxx -->
-                        <arguments>-Psonatype-oss-release -DskipTests ${arguments}</arguments>
+                        <!--<arguments>-Psonatype-oss-release -DskipTests ${arguments}</arguments>-->
                         <localCheckout>true</localCheckout>
                         <pushChanges>false</pushChanges>
                     </configuration>
