@@ -6,11 +6,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>nd4j-cuda-8.0</artifactId>
-    <name>nd4j-cuda</name>
+    <artifactId>nd4j-cuda</artifactId>
+    <!--<name>nd4j-cuda</name>-->
 
     <properties>
-        <cuda.version>8.0</cuda.version>
+        <cuda.version>${cudaClassifier}</cuda.version>
         <env.LIBND4J_HOME>${basedir}/../../../../libnd4j/</env.LIBND4J_HOME>
     </properties>
 
@@ -22,6 +22,21 @@
             </testResource>
         </testResources>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>${project.artifactId}-${cudaClassifier}-${project.version}</finalName>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -282,6 +297,25 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>cuda7.5</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <cudaClassifier>7.5</cudaClassifier>
+            </properties>
+        </profile>
+        <profile>
+            <id>cuda8.0</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <cudaClassifier>8.0</cudaClassifier>
+            </properties>
+        </profile>
+
     </profiles>
 
 </project>

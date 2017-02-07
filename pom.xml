@@ -323,7 +323,6 @@
                         <include>**/*.dll</include>
                         <include>**/*.dylib</include>
                         <include>lib/*</include>
-
                     </includes>
                 </configuration>
             </plugin>
