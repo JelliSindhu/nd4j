@@ -6,53 +6,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>nd4j-cuda-platform</artifactId>
-    <!--<name>nd4j-cuda-platform</name>-->
+    <artifactId>nd4j-cuda-8.0-platform</artifactId>
+    <name>nd4j-cuda-platform</name>
 
     <properties>
-        <cuda.version>${cudaClassifier}</cuda.version>
+        <cuda.version>8.0</cuda.version>
         <nd4j.backend>nd4j-cuda-${cuda.version}</nd4j.backend>
     </properties>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <finalName>nd4j-cuda-${cudaClassifier}-platform-${project.version}</finalName>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-    <profiles>
-        <profile>
-            <id>cuda7.5</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-                <cudaClassifier>7.5</cudaClassifier>
-            </properties>
-        </profile>
-        <profile>
-            <id>cuda8.0</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-                <cudaClassifier>8.0</cudaClassifier>
-            </properties>
-        </profile>
-    </profiles>
 
     <dependencies>
         <dependency>
