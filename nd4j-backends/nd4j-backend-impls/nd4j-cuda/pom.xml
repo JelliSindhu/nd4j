@@ -267,29 +267,6 @@
 
     <profiles>
         <profile>
-            <id>cuda7.5</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-                <cudaClassifier>7.5</cudaClassifier>
-            </properties>
-            <build>
-                <plugins>
-
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>cuda8.0</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-                <cudaClassifier>8.0</cudaClassifier>
-            </properties>
-        </profile>
-        <profile>
             <id>msvc</id>
             <activation>
                 <os>

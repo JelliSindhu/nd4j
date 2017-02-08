@@ -172,6 +172,45 @@
                 <os.arch>arm</os.arch>
             </properties>
         </profile>
+<!-- In thi section profiles are appear and manage nd4j-native build -->
+        <profile>
+            <id>cuda7.5</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <cudaClassifier>7.5</cudaClassifier>
+            </properties>
+        </profile>
+        <profile>
+            <id>cuda8.0</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <cudaClassifier>8.0</cudaClassifier>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>scala2.10</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <scalaClassifier>2.10</scalaClassifier>
+            </properties>
+        </profile>
+        <profile>
+            <id>scala2.11</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <scalaClassifier>2.11</scalaClassifier>
+            </properties>
+        </profile>
+
 
         <profile>
             <id>release-sign-artifacts</id>
