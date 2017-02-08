@@ -6,13 +6,38 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>nd4j-cuda-8.0-platform</artifactId>
+    <artifactId>nd4j-cuda-${cudaClassifier}-platform</artifactId>
     <name>nd4j-cuda-platform</name>
 
     <properties>
-        <cuda.version>8.0</cuda.version>
+        <cuda.version>${cudaClassifier}</cuda.version>
         <nd4j.backend>nd4j-cuda-${cuda.version}</nd4j.backend>
     </properties>
+    <profiles>
+        <profile>
+            <id>cuda7.5</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <cudaClassifier>7.5</cudaClassifier>
+            </properties>
+            <build>
+                <plugins>
+
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>cuda8.0</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <cudaClassifier>8.0</cudaClassifier>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>

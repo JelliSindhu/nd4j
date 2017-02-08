@@ -7,7 +7,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>nd4j-cuda-8.0</artifactId>
+    <artifactId>nd4j-cuda-${cudaClassifier}</artifactId>
     <name>nd4j-cuda</name>
 
     <properties>
@@ -131,9 +131,9 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--            <plugin>
-                            <artifactId>maven-jar-plugin</artifactId>
-                        </plugin>-->
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
@@ -266,6 +266,29 @@
     </dependencies>
 
     <profiles>
+        <profile>
+            <id>cuda7.5</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <cudaClassifier>7.5</cudaClassifier>
+            </properties>
+            <build>
+                <plugins>
+
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>cuda8.0</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <cudaClassifier>8.0</cudaClassifier>
+            </properties>
+        </profile>
         <profile>
             <id>msvc</id>
             <activation>
