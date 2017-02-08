@@ -6,7 +6,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>nd4j-kafka_2.10</artifactId>
+    <artifactId>nd4j-kafka_${scalaClassifier}</artifactId>
     <packaging>jar</packaging>
 
     <name>nd4j-kafka</name>
@@ -20,7 +20,7 @@
 
         <dependency>
             <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka_2.10</artifactId>
+            <artifactId>kafka_${scalaClassifier}</artifactId>
             <version>${kafka.version}</version>
         </dependency>
 
