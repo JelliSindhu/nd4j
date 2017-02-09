@@ -176,7 +176,7 @@
         <profile>
             <id>cuda7.5</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <cudaClassifier>7.5</cudaClassifier>
@@ -195,7 +195,7 @@
         <profile>
             <id>scala2.10</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <scalaClassifier>2.10</scalaClassifier>
