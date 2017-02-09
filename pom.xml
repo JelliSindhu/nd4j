@@ -416,7 +416,7 @@
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven-deploy-plugin.version}</version>
                 <configuration>
-                    <!--<skip>true</skip>-->
+                    <skip>true</skip>
                 </configuration>
             </plugin>
             <plugin>
