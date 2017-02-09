@@ -40,7 +40,7 @@
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
-            <version>${scalaClassifierVersion}</version>
+            <version>${scalaClassifier.version}</version>
         </dependency>
 
         <dependency>
