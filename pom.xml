@@ -435,7 +435,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>local-nexus</serverId>
-                    <nexusUrl>http://ec2-54-200-65-148.us-west-2.compute.amazonaws.com:8088/nexus/</nexusUrl>
+                    <nexusUrl>${NEXUS_URL}/</nexusUrl>
                     <!--<skipStagingRepositoryClose>true</skipStagingRepositoryClose>-->
                     <stagingProfileId>11537a3f5fa97</stagingProfileId>
                 </configuration>
