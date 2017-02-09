@@ -32,7 +32,7 @@
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.kafka</groupId>
-                    <artifactId>kafka_${scalaClassifier}</artifactId>
+                    <artifactId>kafka_${kafka.scala.exclusion.version}</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
