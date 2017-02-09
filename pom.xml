@@ -199,6 +199,7 @@
             </activation>
             <properties>
                 <scalaClassifier>2.10</scalaClassifier>
+                <scalaClassifierVersion>2.10.6</scalaClassifierVersion>
             </properties>
         </profile>
         <profile>
@@ -208,6 +209,7 @@
             </activation>
             <properties>
                 <scalaClassifier>2.11</scalaClassifier>
+                <scalaClassifierVersion>2.11.7</scalaClassifierVersion>
             </properties>
         </profile>
 
